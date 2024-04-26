@@ -1,6 +1,5 @@
 import os
 from pyathena import connect
-import streamlit as st
 
 
 class Connection:
@@ -52,24 +51,3 @@ class Connection:
         __conn.close()
 
         return results, __columns
-
-
-
-    # def get_counts_reviews(self):
-    #     __attributes = "year(TO_DATE(split_part(datecreated,'T',1), 'yyyy-mm-dd')) AS year, week(TO_DATE(split_part(datecreated,'T',1), 'yyyy-mm-dd')) AS week, count(*) AS count_reviews"
-    #
-    #     __conn = connect(aws_access_key_id=self.__access_key, aws_secret_access_key=self.__secret_key, region_name=self.__region_name, s3_staging_dir=self.__athena_dir)
-    #
-    #     __query = "SELECT " + __attributes + " FROM " + self.__table + " GROUP BY year(TO_DATE(split_part(datecreated,'T',1), 'yyyy-mm-dd')), week(TO_DATE(split_part(datecreated,'T',1), 'yyyy-mm-dd')) ORDER BY year(TO_DATE(split_part(datecreated,'T',1), 'yyyy-mm-dd')) DESC, week(TO_DATE(split_part(datecreated,'T',1), 'yyyy-mm-dd')) DESC"
-    #     print(__query)
-    #
-    #     __cursor = __conn.cursor()
-    #     __cursor.execute(__query)
-    #
-    #     results = __cursor.fetchall()
-    #     columns = [desc[0] for desc in __cursor.description]
-    #
-    #     __cursor.close()
-    #     __conn.close()
-    #
-    #     return results, columns

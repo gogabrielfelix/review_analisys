@@ -1,6 +1,6 @@
 import streamlit as st
 import streamlit.components.v1 as components
-from st_pages import Page, show_pages, add_page_title
+from st_pages import Page, show_pages
 import jwt
 import time
 

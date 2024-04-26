@@ -85,8 +85,6 @@ if button:
                     else:
                         if len(answer) > len(answers[1][idx2]):
                             list_answers_bad.append(answer)
-                        else:
-                            list_answers_bad.append(answers[1][idx2])
 
 
 

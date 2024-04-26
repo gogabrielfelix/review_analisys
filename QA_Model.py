@@ -1,13 +1,11 @@
 from transformers import pipeline
 import pandas as pd
-from datetime import datetime
 from Connection import Connection
 
 class Model:
 
     def __init__(self, list_products, initial_date, final_date, list_questions = ['Quais os pontos positivos do produto?','Quais os problemas mencionados do produto?']):
         self.model = pipeline("question-answering", "timpal0l/mdeberta-v3-base-squad2")
-        # 'Quais os problemas mencionados do produto?'
         self.list_products = list_products
         self.initial_date = initial_date
         self.final_date = final_date

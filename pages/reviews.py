@@ -1,5 +1,5 @@
 import streamlit as st
-from st_pages import Page, show_pages, add_page_title
+from st_pages import Page, show_pages
 import sys
 import os
 import pandas as pd
